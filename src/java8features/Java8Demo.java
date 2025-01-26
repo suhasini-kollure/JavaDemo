@@ -1,7 +1,6 @@
-package Java8Features;
+package java8features;
 
 import java.util.Arrays;
-import java.util.Collection;
 import java.util.List;
 import java.util.function.*;
 import java.util.stream.Collectors;
@@ -79,7 +78,7 @@ public class Java8Demo {
         BiFunction<String, String, Integer> biFunction = (x, y) -> (x + y).length();
         System.out.println(biFunction.apply("a", "bc"));
 
-        //UnaryOperator(Function<Integer, Integer>), BinaryOperator (BiFunction<String, String, Integer>)
+        //UnaryOperator(Function<Integer, Integer>), BinaryOperator (BiFunction<Integer, Integer, Integer>)
         UnaryOperator<Integer> a = x -> 2 * x;
         BinaryOperator<Integer> b = (x, y) -> x + y;
 
