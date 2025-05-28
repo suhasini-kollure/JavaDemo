@@ -15,6 +15,7 @@ public class IntermediateOps {
         List<String> list = Arrays.asList("Apple", "Ball", "Cat", "Ant");
         //No filtering at this point, means no operations is performed without terminal op
         Stream<String> filteredStream = list.stream().filter(x -> x.startsWith("A"));
+        filteredStream.forEach(System.out::println);
         long res = list.stream().filter(x -> x.startsWith("A")).count();
         System.out.println(res);
 

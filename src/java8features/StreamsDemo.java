@@ -30,16 +30,17 @@ public class StreamsDemo {
         System.out.println(list.stream().filter(x -> x % 2 != 0).count());
 
         // 2. From Arrays
-        String[] array = {"a", "b", "c"};
+        String[] array = {"a", "b", "c", "d"};
         Stream<String> stream = Arrays.stream(array);
         System.out.println(stream.count());
 
         // 3. Using Stream.of()
         Stream<String> stream1 = Stream.of("a", "b");
+        System.out.println(stream1.toList());
 
         // 4. Infinite streams
         Stream<Integer> generate = Stream.generate(() -> 1);
-        List<Integer> list1 = Stream.iterate(1, x -> x + 1).limit(50).collect(Collectors.toList());
+        List<Integer> list1 = Stream.iterate(1, x -> x + 1).limit(10).collect(Collectors.toList());
         System.out.println(list1);
 
 
